@@ -32,19 +32,19 @@ extension SwiftyBeaver {
 
             switch level {
             case .trace:
-                SwiftyBeaver.verbose(formattedMessage, file, function, line: Int(line), context: metadata)
+                SwiftyBeaver.verbose(formattedMessage, file: file, function: function, line: Int(line), context: metadata)
                 
             case .debug:
-                SwiftyBeaver.debug(formattedMessage, file, function, line: Int(line), context: metadata)
+                SwiftyBeaver.debug(formattedMessage, file: file, function: function, line: Int(line), context: metadata)
                 
             case .info:
-                SwiftyBeaver.info(formattedMessage, file, function, line: Int(line), context: metadata)
+                SwiftyBeaver.info(formattedMessage, file: file, function: function, line: Int(line), context: metadata)
                 
             case .notice, .warning:
-                SwiftyBeaver.warning(formattedMessage, file, function, line: Int(line), context: metadata)
+                SwiftyBeaver.warning(formattedMessage, file: file, function: function, line: Int(line), context: metadata)
                 
             case .error, .critical:
-                SwiftyBeaver.error(formattedMessage, file, function, line: Int(line), context: metadata)
+                SwiftyBeaver.error(formattedMessage, file: file, function: function, line: Int(line), context: metadata)
             }
         }
     }
